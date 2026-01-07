@@ -1,7 +1,8 @@
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        sorted_nums= sorted(nums)
-        for i in range(len(nums)-1):
-            if sorted_nums[i]==sorted_nums[i+1]:
-                return True
+    def containsDuplicate(self, nums):
+        if len(set(nums))< len(nums):
+            return True
         return False
+array = [1,2,3,1]
+sol = Solution()
+print(sol.containsDuplicate(array))
