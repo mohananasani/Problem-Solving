@@ -1,3 +1,7 @@
+
+"""
+    Using Kadane's algorithm
+"""
 class Solution:
     def maxSubArray(self, nums):
         max_sum = nums[0]
@@ -20,6 +24,7 @@ class Solution:
 
         else:
             for i in range(len(nums)):
+            
                 current_sum+=nums[i]
                 # Resetting to 0 if we have negative sum, as it don't contributes to max sum
                 if current_sum<0:
