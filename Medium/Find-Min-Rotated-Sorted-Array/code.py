@@ -4,6 +4,7 @@ class Solution:
         while start < end:
             mid = (start+end)//2
             # Checking and moving to second half
+            # Mid should always less than end, if not then starting point(min) will present in between these
             if nums[mid]>nums[end]:
                 start = mid+1
             else:
