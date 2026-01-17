@@ -74,7 +74,7 @@ class BrutForce2:
 
         return len(index_set) == len(s)
     
-class OptimalSolution:
+class OptimalSolution1:
     """
     Time: O(n)
     Space: O(n) Storing each char frequency
@@ -100,10 +100,12 @@ class OptimalSolution:
         return True
 #If inputs strings are only small case alphabets
 
-class OptimalSolution:
+class OptimalSolution2:
     """
     Time: O(n)
-    Space: O(n) Storing each char frequency
+    Space: O(26)=> O(1)
+        O(26) - Storing 26 alphabets freqencies and space cannot go beyond 26, so it will 
+        be considered as O(1)
 
     Approach: 
         Frequency increment and decrement
