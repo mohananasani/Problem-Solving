@@ -83,4 +83,24 @@ class Solution:
         res.append(to_compare)
 
         return res
+    
+
+# Reducing the coginitive complexity of code of above
+class Solution:
+    
+    def merge(self, intervals):
+        intervals.sort(key=lambda x: x[0])
+        res = []
+        prev = intervals[0]
+
+        for curr in intervals[1:]:
+            # already sorted so we can compare with start of curr and end of prev
+            if curr[0] <= prev[1]:   # overlap
+                prev[1] = max(prev[1], curr[1])
+            else:
+                res.append(prev)
+                prev = curr
+
+        res.append(prev)
+        return res
 
