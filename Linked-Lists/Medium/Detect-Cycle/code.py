@@ -85,6 +85,17 @@ So the system:
 #         self.next = None
 
 class Solution:
+    """
+    Time: O(n)
+    Space: O(1)
+    Approach: Floyd’s Cycle Detection Algorithm, also known as the Tortoise and Hare approach.
+    Steps:
+        Use two pointers:
+        slow moves one step at a time
+        fast moves two steps at a time
+        If the linked list has a cycle, the fast pointer will eventually meet the slow pointer.
+        If the list has no cycle, the fast pointer will reach None.
+    """
     def hasCycle(self, head):
         if not head :
             return False
